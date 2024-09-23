@@ -87,3 +87,16 @@ function calculateTotalHours(employeeName){
 }
 //Used to test function
 calculateTotalHours("Sanjay");
+
+//Task 5 create a function to show if any employees are available on a certain day
+function listAvailableEmployees(day){
+//Runs through each employee to see if they are working on the stated day
+        employees.forEach(worker => {let isWorking = worker.shifts.some(shift => shift.day === day);
+//Uses an ! as a NOT statement and logs that the employee is NOT working
+        if(!isWorking){
+            console.log(`${worker.name} is not scheduled`);
+        }
+    })
+}
+//Used to test function
+listAvailableEmployees("St");
