@@ -33,5 +33,15 @@ let employees = [
         ]
     }
 ];
-
+//Shows the results from the array
 console.log(employees);
+
+//Task 2 display employee shifts with the day and hours they worked
+function displayEmployeeShifts(employee) {
+    console.log(`Schedule for ${employee.name}`);
+    employee.shifts.forEach(shift => {
+        console.log(`Day: ${shift.day}, Hours: ${shift.hours}`);
+    });
+}
+//Shows the employee shift for the 2nd value in the array, for "Sander"
+displayEmployeeShifts(employees[1]);
