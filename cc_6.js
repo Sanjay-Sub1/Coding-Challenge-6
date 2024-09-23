@@ -72,3 +72,18 @@ function assignShift(employeeName, day, hours){
 //Checks to see that the function works correctly
 assignShift("Jorge","Th",5);
 console.log(employees[2]);
+
+//Task 4 calculate the total hours worked in the week by a referenced employee
+function calculateTotalHours(employeeName){
+//finds employee name in the array
+    let worker = employees.find(worker => worker.name === employeeName);
+//Set the variable total hours to 0
+    if (worker){
+        var totalHours = 0;
+//Iterates that per each shift worked, the amount of hours worked each day is added into the totalHours variable
+        worker.shifts.forEach(shift => {totalHours += shift.hours;});
+        console.log(`${worker.name} has worked ${totalHours} this week`);
+    }
+}
+//Used to test function
+calculateTotalHours("Sanjay");
